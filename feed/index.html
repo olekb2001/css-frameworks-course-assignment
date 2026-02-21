@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed</title>
+    <link href="../dist/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50 text-gray-800 flex">
+    <!-- Left colored sidebar strip -->
+    <div class="w-2 bg-teal-500 min-h-screen"></div>
+
+    <div class="flex-1">
+      <!-- Navbar -->
+      <nav
+        class="bg-white shadow-md px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-violet-600">Ole Social App</h1>
+        <ul class="flex space-x-6 text-slate-700 font-medium">
+          <li>
+            <a href="../index.html" class="hover:text-violet-600">Login</a>
+          </li>
+          <li>
+            <a
+              href="../feed/index.html"
+              class="text-violet-600 font-semibold border-b-2 border-violet-600 pb-1"
+            >
+              Feed
+            </a>
+          </li>
+          <li>
+            <a href="../profile/index.html" class="hover:text-violet-600"
+              >Profile</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="max-w-4xl mx-auto p-6 space-y-8">
+        <!-- Search and Sort -->
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center gap-4"
+        >
+          <input
+            type="text"
+            placeholder="Search posts..."
+            class="border border-gray-300 p-2 rounded w-full sm:w-1/2 focus:outline-none focus:ring-2 focus:ring-violet-300"
+          />
+          <select
+            class="border border-gray-300 p-2 rounded w-full sm:w-1/4 focus:outline-none focus:ring-2 focus:ring-violet-300"
+          >
+            <option value="newest">Sort by: Newest</option>
+            <option value="popular">Most Popular</option>
+          </select>
+        </div>
+
+        <!-- Post Form -->
+        <form
+          class="bg-white p-6 rounded shadow space-y-4 border border-gray-200"
+        >
+          <h2 class="text-xl font-semibold text-violet-600">Create a Post</h2>
+          <input
+            type="text"
+            placeholder="Post title"
+            class="border border-gray-300 p-2 rounded w-full"
+            required
+          />
+          <textarea
+            placeholder="What's on your mind?"
+            class="border border-gray-300 p-2 rounded w-full"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-violet-600 text-white px-4 py-2 rounded hover:bg-violet-700"
+          >
+            Post
+          </button>
+        </form>
+
+        <!-- Post List -->
+        <section class="space-y-6">
+          <article class="bg-white p-4 rounded shadow space-y-2">
+            <img
+              src="https://picsum.photos/600/300?random=1"
+              alt="Post thumbnail"
+              class="w-full rounded object-cover"
+            />
+            <h3 class="text-xl font-semibold text-teal-600">
+              Exploring the Mountains
+            </h3>
+            <p class="text-gray-700">
+              Just went hiking in the Rockies. The views were incredible!
+            </p>
+          </article>
+
+          <article class="bg-white p-4 rounded shadow space-y-2">
+            <img
+              src="https://picsum.photos/600/300?random=2"
+              alt="Post thumbnail"
+              class="w-full rounded object-cover"
+            />
+            <h3 class="text-xl font-semibold text-teal-600">
+              New Café in Town
+            </h3>
+            <p class="text-gray-700">
+              Tried the espresso at the new café — 10/10 would recommend.
+            </p>
+          </article>
+
+          <article class="bg-white p-4 rounded shadow space-y-2">
+            <img
+              src="https://picsum.photos/600/300?random=3"
+              alt="Post thumbnail"
+              class="w-full rounded object-cover"
+            />
+            <h3 class="text-xl font-semibold text-teal-600">
+              Throwback Thursday
+            </h3>
+            <p class="text-gray-700">
+              Remembering this amazing beach day with friends.
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
